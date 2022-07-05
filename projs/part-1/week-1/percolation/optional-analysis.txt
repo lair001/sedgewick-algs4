@@ -1,0 +1,45 @@
+It would've required much less code duplication to write a program
+for the optional analysis if algs4.jar had a UnionFind interface
+for its UnionFind implementations. Since it doesn't, I won't bother
+writing a program. Instead, I'll simply give my analysis on what
+results such a program should find.
+
+Runtime
+
+Runtime should grow linearly with T with n held constant for both
+algoritms. By increasing T, you are simply running more iterations
+of the same UnionFind algorithm and the computation of mean and
+stddev increases linearly as the number of data points increases.
+
+The number of sites, N, increases with n^2. For weighted quick
+union, the runtime of the find method is guaranteed to be
+a * lg(N).  For quick union, however, the runtime of find() is
+a * N in the worse case. For both, the mean number of invocations
+of open (which calls find() a number of times equal to or less
+than a small constant) needed to make the system percolate grows
+linearly with N.  Therefore,
+
+runtime for T quick find trials: ~aTN^2 = ~Tn^4
+runtime for T weighted quick find trials:
+  ~aTNlg(N) = ~aT * n^2 * lg(n^2)
+  = ~2aT * n^2 * lg(n)
+  = ~aT * n^2 * lg(n)
+  (constant a absorbs the factor of 2)
+
+Memory
+
+Quick Find
+By far the largest memory use is for the byte[] siteData in
+percolation and the int[] id in quick find. These both have a
+number of elements equal to N = n^2.  All other memory usage
+is constant regardless of N and is negligible for large N. Given
+that a int takes 4 bytes of memory and a byte takes, well,
+1 byte of memory:
+
+memory for percolation using quick find: ~5n^2
+
+Weighted Union Find
+Same as quick find except we have an extra int[] array for tracking
+the sizes of the subtrees.
+
+memory for percolation using weighted quick find: ~9n^2

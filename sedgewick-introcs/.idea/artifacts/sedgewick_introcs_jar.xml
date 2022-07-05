@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sedgewick-introcs:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sedgewick_introcs_jar</output-path>
+    <root id="archive" name="sedgewick-introcs.jar">
+      <element id="module-output" name="sedgewick-introcs" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../lib/sedgewick-stdlib.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

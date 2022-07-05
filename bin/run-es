@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Helper script for running examples and solutions in the
+# examples and solutions project. Otherwise, you would need
+# to prefix the class with the entire package path.
+
+BOOK_PROJ_PREFIX=${ALGS4_REPO_ROOT}/examples-and-solutions/src/main/
+DIR=`pwd`
+TRUN_DIR=${DIR#$BOOK_PROJ_PREFIX}
+PACKAGE=`echo $TRUN_DIR | tr / .`
+
+java-sedg $PACKAGE.$1 ${@:2}

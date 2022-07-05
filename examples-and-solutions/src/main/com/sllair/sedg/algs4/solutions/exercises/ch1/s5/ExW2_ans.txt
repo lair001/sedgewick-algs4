@@ -1,0 +1,61 @@
+Let WQUPC = weighted quick union with path compression
+
+A
+Trivially possible merely by initializing a WQUPC of size 9.
+See ExW2_a_1.txt.
+
+B
+Not possible.  ExW2_b_1.txt comes close but the parents of 0
+and 9 are wrong.
+
+We need to get 0 into the tree rooted at 8 that contains 7.
+If we try to link 0 to the tree after linking 7 and 8, then
+either 7 or 8 will be the root.  If we try to link 0 and 7
+before linking 8 to the tree, either 0 or 7 will be the root.
+If we try to link 0 and 8 before linking 7 to the tree,
+then either 8 will be root of both 7 and 0 or 0 will be the
+root of both 7 and 8.
+
+We also need to get 9 into the tree root at 3 that contains 1.
+This tree is structured similarly to the one root at 8 and
+and we run into analogous issues when trying to link 9 into it.
+
+The key issue here is that the weighted quick union cannot
+produce a tree of size 3 and height 2. Such a result would
+violate Proposition H proved on page 229 of the book.
+
+C
+Not possible.  There is a tree with structure:
+7 -> 9 -> 1 -> 3 -> 6
+This has size of 5 and height of 4, violating Proposition H.
+
+D
+Possible by first forming a link between 0 and 1 other node,
+choosing 0 as the root.  Then linking all other nodes to 0.
+See ExW2_d_1.txt.
+
+E
+Not possible.  There is a tree with structure:
+6 -> 5 -> 4 -> 1 -> 6
+This has a cycle beginning and ending at 6, and the WQUPC
+algorithm cannot produce cycles for two reasons:
+
+1.  The dynamic connectivity problem checks whether sites are
+    connected before attempting a union.
+2.  union() connects the roots of two sites together, not the
+    sites themselves.  E.g. if we were to call union() after
+    the other links where made, it will find that 6 is
+    the root of both 5 and 6 and effectively do nothing except
+    directly link 4 and 5 to 6 due to path compression.
+
+F
+Not possible.  This forest consists of 5 cycles / double links:
+0 <-> 9
+1 <-> 8
+2 <-> 7
+3 <-> 6
+4 <-> 5
+See the explanation of E for why none of these are possible.
+
+Solution:
+B, C, E and F are not possible.

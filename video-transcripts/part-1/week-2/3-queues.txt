@@ -1,0 +1,45 @@
+Okay, next we'll briefly consider
+queue implementations using the same basic underlying data structures. So here's the corresponding API for
+QueueOfStrings. Actually it's the same API as for
+stacks, just the names are different. Instead of push we have enqueue
+instead of pop we have dequeue. And the semantics is different, for
+enqueue we add an item say at the end of the queue, and for dequeue we
+remove an item from the beginning. It's as if you're waiting
+in line to buy a ticket. When you're enqueue you go at the end, and when the one that's been in there
+the longest is the one that comes off. So lets look at how we implement those,
+first using linked list and then arrays. So now our representation of
+a queue with a length list, we need to maintain two pointers,
+references. One, to the first item in the list and
+the other to the last item in the list. When we insert, we're going to add the item at the end
+of the list instead of at the beginning. And when we remove, we'll do the same,
+we'll take it off at the front. So here's the implementation of dequeue. It's identical to the code for
+pop for a stack. We save away the item, we delete the first
+node by advancing the reference and then we return the item, so identical. To add a note, or enqueue,
+add a new note to a linked-list. We want to put it at the end, so
+that will be the last one returned. So we, to add it at the end, so first thing we need to do is save a link,
+the last node. We're going to need that because
+we need to change it's reference from null to point to the new node. Then we'll create a new node for
+the end of the list. We'll populate its fields and
+then that old link will change that from null to
+a pointer to the new node. So again, just a few lines of code, [COUGH] that's basic
+linked-list processing. Actually years ago when we taught courses
+in algorithms and data structures, much of the course would be about
+this kind of pointer manipulation. But nowadays that's restricted to just
+a few implementations like stack and queue and
+a few other fundamental data structures. So we don't need so much any more general
+programs for manipulating linked-lists. We encapsulate them in basic
+data types like these. All right, so let's go back to
+our full implementation and this is just taking care of collecting
+the code from the previous slides. But also taking care of special
+cases when the queue is empty. To make sure that if the queue
+is empty after we move an item we gotta set last to null. Make sure that both first and
+last are always what we want them to be. So those are details
+that are easy to check. Okay, what about arrays? Well, we won't do the details, but it's not difficult to implement
+queues with resizing arrays as well. Not difficult, but a definitely tricky programming exercise
+that people are welcome to try. So we'll maintain two pointers,
+the first item in the queue and the tail, which is the position for
+the next item to appear. So for enqueue, you add a new item a tail. And for dequeue you remove an item for
+a head. And the trick is that once
+you get past the capacity, you have to reset back to zero. And so that's a little extra code, and then you have to add the resizing
+capability as well to implement the data structure
+the same as for stack. And we'll leave that as an exercise.

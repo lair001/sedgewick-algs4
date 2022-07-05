@@ -1,0 +1,178 @@
+Welcome back. Today we're going to talk about
+algorithms and data structures for implementing some fundamental data
+types called bags, queues, and stacks. You may be somewhat familiar with these, but today we're going to take
+a careful and close look at them. The idea is that in many applications,
+we have collections of objects that we want to maintain and
+the operations are very simple. We want to add something to the
+collection, maybe remove something from the collection and iterate through
+the objects in a collection, performing some operation on them,
+and of course test if it's empty. Now for most of these,
+the intent is very clear. The key is, when it comes to removing
+an item, which item do we remove? The two fundamental classic data
+structures for this, the stack and the queue, differ in the way in which
+the item to be removed is chosen. For the stack, we take out the item
+that was most recently added. The terminology that we use is
+pushed to in certain items and pop to remove the item
+most recently added. That's also called the LIFO discipline,
+last in, first out. For queue,
+we examine the item least recently added. In those operations to distinguish them, we call NQ to insert an item and
+DQ to remove an item. And that's also call the FIFO discipline,
+first in, first out. So we're going to take a look today
+at how to implement these things. Our sub text today is all
+about modular programming. And that's going to be a discipline that
+we're going to follow carefully throughout this course. The idea is to completely separate
+the interface and the implementation. So when we have these types of
+data structures and data types that are precisely defined, like stacks
+and queues and so forth, what we want to do is completely separate the details
+of the implementation from the client. The client can have many different
+implementations from which to choose, but the client code should only
+perform the basic operations. The implementation, on the other hand, can't know
+the details of the client needs. All it's supposed to do is
+implement those operations. In that way, many clients can
+reuse the same implementation. So this allows us to create modular, reusable libraries of algorithms and
+data structures that we can use to build more complicated algorithms and
+data structures. It also allows us to focus on
+performance when appropriate. Again, this is a modular
+programming style that's enabled by object oriented programming languages,
+such as Java. And we'll be very disciplined
+in our use of this style. So to begin, we will talk about stacks. Stacks are familiar. Many of you probably implemented stacks in
+an introductory programming course, but we'll do a thorough introduction
+to implementations right now. As a warm up, let's suppose that we
+have a string, a collection of stings. They might be short, they might be long. And what we want to have is the ability
+to save away a collection of strings and remove and return the most recently
+added string periodically, and also test if it's empty. So that's our API. We have a constructor to
+create an empty stack. For insert, we have a method called
+push that take a string as argument and for remove, we have a method, pop, that
+returns the string most recently added. We have an is empty test
+which returns a boolean. Also in some applications,
+we would include the size as well. So again, as always, we'll first write
+a client and then look at implementations. And our simple client is to
+take some strings on standard input and some pop commands which
+are indicated with hyphens. And so, this client reads
+strings from standard input. If the string is equal
+to the hyphen character, it'll pop the string at the top
+of the stack and print it. Otherwise, if it's a string that's
+not equal to the hyphen character, it'll just push it onto the stack. So in the example down below here, if we have this file called tobe.text, then what the client will do is push
+to be or not to all on the stack. Then when it comes to this hyphen, it'll pop the most recently inserted
+item which is 'to' in this case. Then it'll put be on the top of
+the stack and then pop the top item on the stack which is now be, and
+then pop the item most recently added. Be is gone, to is gone so
+the next is not, and so forth. So this is a simple test client that
+we can use to test our implementations. So now let's look at the code for
+implementing a stack. The first implementation that
+we'll look at uses linked lists. If you're not familiar with linked lists, you'll need to review that in
+section 1.1 through 1.3 of the book, or in our introduction to programming and
+Java book. Even if you are familiar with linked
+lists, it's worth taking a look at this code because it's the style of coding
+that we'll use throughout the course for much more complicated data structures. So the idea is to keep a linked list
+which consists of nodes that have strings in them, and references,
+to the next item in the linked list. And to implement a stack when we do a push operation, we insert a new node at
+the beginning of the linked list. And we do a pop operation, we remove the first node from
+the beginning of the linked list. That's the most recently added item. So let's look at what
+that code looks like. We use to implement
+linked list in all linked data structures throughout the course, we
+use what's called an inner class in Java. And that's just a way to describe
+that we're going to be manipulating node objects that each consists of
+a string and a reference to another node. So the pop operation for
+linked lists is very easy to implement. First, we are going to need to
+return the first item on the list, so we save that away. Take first.item and
+save that in the variable item. Then, to get rid of the first node,
+we just advance our pointer to the first item on the list
+to point to the next item. And then that first node is ready to
+be reclaimed by the garbage collector. And then the last thing we need to do is
+just return the item that we saved away. So that is the pop operation,
+what about the push operation? Push operation, we want to add a new node
+at the beginning of the linked list. So first thing we do is save away
+the pointer to the beginning of the list, that's oldfirst = first. Then we create a new node that's
+going to be the new node that we put at the beginning of the list. That's first = new Node. And then we set its instance variables. Its item is the string that we want to
+put at the beginning of a list, in this case, not. And its next the oldfirst
+item on the list, which is now the second item on the list. So after this operation, we're first
+pointing to the beginning of the list. And we have the items on
+the list in a decreasing order of when they were put onto the stack. So that also is a foreliner to
+implement the stack push operation. So this is a complete linked-list
+implementation of all the code to implement a linked-list for
+a stack of strings in Java. It's a class, the constructor doesn't have
+to do anything, there's no constructor. We have this inner class that we use to
+build the items in the linked-list and we make it an inner class so we can directly
+refer to those instance variables. And then the only instance variable
+of a stack is a reference to the first node on the list and
+it starts out being null. And then isEmpty is just testing whether
+the first note on the list is null. And then push is the four lines of code
+that I gave on the previous line and pop is the three lines of code that
+I gave on the slide before that. That is a complete implementation for
+linked-list that would work with as a fine push down stack
+implementation for any client. So now we can analyze the performance of
+that so that we can provide clients with information on how well the algorithm
+data structure will perform. In this case, it's easy to see that every operation
+takes constant time in the worst case. There's only a few instructions for
+each one of the operations. There's no loops. So that's obviously a very
+desirable characteristic. Then, how about space usage? That depends very much on
+the implementation and the machine so this is a typical Java implementation
+that we do the analysis for. And you can test this out for different types of environments easily and
+it's representative. So, in Java, in inner class there is, for every object there's 16 bytes of overhead. There's some extra overhead, 8 bytes,
+because it's an inner class. And then there's 2 references
+that we built in our class node, 1 to a string and another 1 to a node and
+those are each 8 bytes. So we have 40 bytes per stack note. If we have a stack of size N,
+we have about 40 N bytes. There's a little extra for it first,
+but that's about N overhead for the whole stack. But when N is large, 40 N is a very close
+estimate to the amount of space needed. This does not include the space for the strings themselves,
+which are owned by the client. But with that, we can properly assess the resource usage of this implementation
+for different client programs. Now, it's constant time but
+there's faster implementations of stack. And since stack is used in
+the inner loop of some algorithms, it's important to think about
+even faster implementations. And another natural way to implement
+a stack is to use an array to store the items on a stack, so
+let's take a look at that. This alternative of choosing
+between linked structures and arrays is fundamental, and
+it's going to come up again and again when we consider more complicated
+data structures and algorithms. So, we want to be sure to analyze
+it in the simple case for stacks to set the stage for
+more complicated applications later on. To use an array, we just keep the n
+items on the stack in the array and the array location
+with index N is the place, the top of the stack,
+where the next item is going to go. So to push,
+we just add a new item at s of N into pop, we remove the item that's at
+s of N- 1 in decrement N. Now there's a fundamental
+defect in using an array and that is that you have to declare
+the size of the array ahead of time and then so the stack has a certain capacity. And if there's more items on
+the stack than the capacity, we'll have to deal with that problem. And that's a fundamental problem
+that we have to deal with in array implementations in all sorts
+of algorithms data structures. So, again, considering it for
+this simple case will pay off later on. So here's the full implementation of stack
+for using an array to represent the stack. Now we have an instance variable
+which is an array of strings, and our variable N which is
+both the size of the stack and the index of the next open
+position on the stack. This one has a constructor, and
+the constructor creates the array. Now, we're cheating in this
+implementation to keep it simple, and we'll take care of this
+cheat in a little while, by requiring the client to provide
+the capacity of the stack. In a few applications, this might be fine, but in many many applications,
+that's too onerous of requirement. The client really can't
+know how big the stack is. The client might have a lot of stacks that
+need to be maintained simultaneously and maybe they reached their maximum
+capacities at different times and various other things. So we need to remove this cheat and
+we will, but the code is nearly trivial
+if we have the capacity. To check if it's empty we check if N is 0. To push an item,
+we use N to index into the array, put the item there and then increment N. That's the shortcut in many
+programming languages nowadays for use the index and then increment it. And to pop, we decrement the index and then use it to return
+the item in the array. So each of the operations is a one-liner. And this is a fine implementation for
+some clients. That's array implementations of stack, but it breaks the API by requiring
+the client to provide the capacity. So what are we going to do about that? There are a couple of things
+that we didn't consider. We didn't put in code to throw
+an exception if the client pops from an empty stack. Probably should do that. And for overflow, what happens
+when the client does too much? We're going to talk about
+an approach called resizing that will allow us to avoid overflow for
+clients. There's another issue about whether clients can insert null
+items into the data structure. In this case, we do allow
+the client to insert null items. But we do have to worry in Java
+about a problem called Loitering and that is the idea that we have
+references to an object in our array implementation in the stack
+array when we're not really using it. So when we decrement that value N, there's still a pointer to the thing that
+we took off the stack in that array. Even though we know we're not using it,
+the Java system doesn't know that. So to avoid that and
+really allow most efficient use of memory, it's best to set that
+removed item entry to null. So there's no reference to the old item
+left there and then the garbage collector can reclaim the memory since
+there's no outstanding references. That's a detail, but an important one
+that we have to take care of in our implementations to make sure that we're
+getting most efficient use of memory. [BLANK AUDIO]

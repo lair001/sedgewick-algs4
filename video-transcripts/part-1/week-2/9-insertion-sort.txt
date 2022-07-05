@@ -1,0 +1,100 @@
+Now we'll look at insertion sort, which is another elementary method
+that interestingly has quite different performance
+characteristics than selection sort. Let's look at a demo of insertion sort. For insertion sort, what we're
+going to do is we'll move an index i from left to right as before,
+but now, in the i'th iteration, we're going to move a[i] into position
+among the elements to its left. Let's look at how that works
+on our example with cards. So, now we start by initializing
+i at the first card, and we take the idea that everything from i
+to its left is going to be sorted, and everything from the right we're
+not going to look at at all. So everything to the left of i is in
+ascending order, everything to the right, we haven't seen it all yet. So now when we increment i, well,
+in this case it's already in order, we don't have anything else to do. In the third case now,
+when i is at the third entry in the array, now we start a index j, and
+we move that starting at i to the left. And what we need to do is just exchange
+the 5 with every element to its left that's greater. So first we exchange it with the 10,
+it's still not in place, so we exchange it with the 7. Now we get to the beginning of the array,
+and once we've done that or we've hit a smaller element, then we have
+everybody to the left of i in order. So now we increment that again,
+and we come to the 3. Again, we exchange as long as the card
+immediately to the left is greater. And once we've done that, then we have everything to
+the left by in ascending order. Now, in this case, we have the 8, and
+we only have to exchange one, and now it's got the 7 to its left and
+everything is in order. So we've achieved putting it in
+order with less work in this case. We don't always have to go all
+the way back to the beginning. 4, exchange it with everybody
+to its left that's greater, until we find a smaller element,
+then it's in ascending order. 2 has to go all the way
+back to the beginning. But then the very next one,
+the 9 has to only go back one position, and the 6 has to go about halfway back. And then we have the entire array sorted. Again, we can look at insertion
+sort in terms of invariants. Our pointer still scans
+from left to right, but now the elements to the left
+of the pointer, including it, are in order, but the elements to
+the right have not yet been seen at all. So we have to look at the code that's
+going to maintain that invariant as the pointer increments. Move the pointer to the right,
+it's incremented again. Now the invariant's broken
+because the element on the pointer is not in sorted order. To put it in sorted order, we have to move
+from right to left, exchanging it with every larger elements to its left, and
+that's what the code at the bottom does. It starts j at i, and decrements j, exchanging j with
+the elements to its left, a of j with the element to its left,
+a of j-1, as long as a of j is less than a of j-1 or
+j is bigger than 0. And that immediately gives this code for
+insertion sort, which is similar to our code for
+selection sort and just as simple. It's got two nested for loops,
+selection sort had two nested for loops, a test, a comparison, and
+an exchange inside the for loop. And that's a fine implementation
+of an elementary sorting method. What about the analysis of insertion sort? It's more complicated. Our proposition says that insertion sort,
+to sort randomly ordered array with distinct keys, it'll use about
+one quarter N squared compares, and about the same number, one quarter
+N squared exchanges, on the average. This is more complicated to prove. It depends on the array
+being randomly ordered. And again, you can get a feeling for where the proposition comes from
+by looking at this N by N trace. Again, the black elements
+are the ones that we compare, and actually, they're also the exchanges. On the red one is the one
+that's finally put into place. And you can see that for a large array
+that's randomly ordered, the element that we put into place is going to go
+about halfway back on the average. So that means about half the elements
+below the diagonal are going to be black on the average. There's N squared over
+2 below the diagonal, half of that is N squared over 4. The exact analysis is not
+much more detailed than that. This is a bigger trace that shows, again, about half the elements below
+the diagonal are involved in the sort. [COUGH] Let's look at an animation. Since N squared over 4
+versus N squared over 2, insertion sort's going to be about
+twice as fast as selection sort. So we can do about twice as many items
+in the trace in the same amount of time. It grabs an element and
+brings it back into position every time. So that's an animation for
+randomly ordered items. Now, insertion sort does depend
+on the initial order of the data. Let's look at the best case and the worst
+case, which are certainly outliers. If the array happens to be already sorted,
+all insertion sort does is really validate that each element
+has got smaller elements to its left. So it does no exchanges. It gets the sorting job done
+with just N minus 1 compares. On the other hand,
+if the array is in descending order and has no duplicates,
+then every element goes all the way back. It makes n squared over 2 compares and
+n squared over 2 exchanges. So in the first case, it's much, much faster than selection sort,
+linear instead of quadratic. In the second case,
+it's slower than selection sort, because it uses about the same number of
+compares, but it uses many more exchanges. So let's see that in the animation. So this is when the items
+come in in reverse order. Now, every time it gets a new item, it has to exchange it all
+the way back to the beginning. Same kind of dynamic characteristic
+as selection sort, except, for every step, it's not just comparing, it's also exchanging,
+which makes it even slower in practice. So this is a bad case that we wouldn't
+like to see in a practical application. But there's also a good case that actually
+we take advantage of in plenty of practical applications. And that has to do with when
+the array is partially sorted. To talk about this in a quantitative way,
+we define what's called an inversion. An inversion is just a pair of keys
+that are out of order in the array. So this array has six inversions, T and R are out of order,
+because R should go before T. T and P are out of order, and so forth. This array has six inversions. And we define an array to be
+partially sorted if its number of inversions is linear,
+if it's less than some constant times N. And partially sorted arrays
+appear often in practice. For example, if you have a large array
+with just a few, that's sorted except for just a few unsorted elements
+appended at the end, it's going to be partially sorted. Or in other cases, if you only
+have a few entries out of place, the array's going to be partially sorted. These types of things arise
+often in practical applications. And what's interesting about insertion
+sort is that it runs in linear time for partially sorted arrays. And the proof is, the number of
+comparisons and the number of exchanges is equal to the number of exchanges equal
+to the number of inversions, and there's an extra compare for
+every element except the first. So let's look at how that
+looks in the animation. Here's a partially sorted array, and you can see that insertion sort
+quickly gets the job done. We're going to take advantage of this
+a little bit later in this lecture. That's insertion sort,
+our second elementary sorting method.

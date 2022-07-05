@@ -1,0 +1,45 @@
+Proving that height of the trees for this Weighted quick-union
+by height algorithm is bounded by lg(N) is very similar to
+proving that the depth of any node in a forest built by the
+Weighted quick-union (by size) is bounded by lg(N). See
+Propositon H on page 229 of the text.
+
+Our algorithm has the property that the height of a tree
+resulting from the union of two trees is either the height
+of the taller tree if the trees have unequal height or the
+height of the trees plus 1 if they are of equal height. This
+can be clearly seen in the code for union(). However, we can
+also reason about it as follows:
+
+We take the union of two trees by setting the parent of the
+root of one of the trees equal to the root of the other tree.
+This increases the depth of all of the nodes in the tree whose
+root now has a parent by 1. If the trees are of unequal height,
+we take the parent of the root of shorter tree to be the root of
+the taller tree. However, the height of the shorter tree is at
+least 1 less than the height of the taller tree.  Therefore,
+the height of the union tree is the height of the taller tree.
+If the trees are of equal height, then the depth of the nodes
+in whichever tree whose root we decide to turn into a child of
+the root of the other tree increases by 1. Therefore, the
+height of the union tree is greater than the height of the
+original trees by exactly 1.
+
+Therefore, it suffices to only consider trees of equal height h.
+h = 0 if and only if the tree has only a single node (k = 1). Hence,
+we have a base case where the condition holds:
+h = 0 = lg(1) = lg(k).
+
+Now let us take the union of two trees of h = 0. Then for
+union tree has h = 1 and k = 2. The condition still holds:
+h = 1 = lg(2) = lg(k).
+
+We can keep combining trees of equal height like this, doubling
+k each time:
+lg(2k) = lg(N) + lg(2) = lg(N) + 1 = h + 1
+
+However, a union of two trees can never contain more than the
+the total number of nodes in the entire forest: k <= N
+
+I.e. we will run out of equal height trees before k
+can exceed N. Hence, the condition follows by induction.

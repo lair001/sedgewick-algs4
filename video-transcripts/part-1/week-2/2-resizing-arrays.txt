@@ -1,0 +1,107 @@
+Okay, our basic array implementation
+of stacks had the defect where we required clients to provide the maximum
+capacity of the stack ahead of time. Now we're going to look at a technique for
+resolving that problem. How do we, we do not implementing the API? The API says we should just
+be able to create a stack and it should be able to grow and
+shrink to any size. So how are we going to grow and
+shrink the array? Well, first thing you might think of is,
+when the client pushes a new item onto the stack, increase the size of
+the array by 1, and when it pops, decrease the size of the array by 1. That's easy to code up, but not worth it, because it's
+much too expensive to do that. The reason is that you have to create
+a new array, size one bigger, and copy all the items to that new array. So, inserting the first N items
+would take time proportional, if the stack's of size N-1,
+it's going to take time N, N-2, time N-1. So first N items would take
+the sum of the first N integers, which we know is about N squared over 2. Quadratic time to insert
+N items into a stack, that kind of performance
+is unacceptable for large problems, as we've seen,
+as we will see many times. So the challenge is to do the resizing,
+but somehow ensure that it
+happens infrequently. So the well-known technique for
+doing that, called repeated doubling,
+is to, when the array fills up, create a new array of twice the size and
+copy all the items over. Then we don't create new
+arrays all that often. So here's an implementation of that. We start with an array of size 1. If we have a full stack,
+which we know by testing N, which is the number of items in
+the stack versus the array length, then we just resize the array into one of twice
+the length before inserting the item. And how do we resize to a new capacity? We create a new array of that capacity and
+just go ahead and copy our current stack into the first
+half of that and then return it. And that will reset our instance variable, which is our stack,
+to this new, bigger array. [COUGH] So, the idea and
+the consequence of this is, if you insert N items into an array, into
+a stack with this array representation, the time will be proportional to N,
+not N squared. And the reason is that you only create
+a new array every time it doubles. But by the time that it doubles, you've
+inserted that many items into the stack. So on average, it's like adding
+a cost of one to each operation. So if you just calculate the cost
+of inserting the first N items, you're going to have instead of the sum
+of the integers from to 1 to N, you're going to have the sum of
+the powers of 2 from 1 to N. And that'll give a total cost of about 3N. So that's, in array accesses for
+the copy, there's two array accesses. So to insert N items,
+it's about three array accesses. This plot is another way of looking at it, which is the number of array accesses
+taken as you implement push operations. Every time you hit a power of 2, you take
+that many array accesses, but in a sense, you've already paid for
+them by putting those items on the stack. So that's called amortized analysis, where we consider the total cost
+averaged over all operations. And this is a fine example and
+useful example, of amortized analysis to get
+efficiency in a stack implementation. Now we have, what about the pop, we have
+to think about how to shrink the array. So, you might think, well,
+we doubled it when it was full, why don't we cut it in half
+when it gets to be half full? We don't want the array to get too empty. Well, that one doesn't exactly work
+because of a phenomenon called thrashing. If the client happens to do
+push-pop-push-pop alternating when the array is full, then it's going to
+be doubling, having, doubling, having, doubling, having. Creating new arrays on every operation. Take time proportional to N for
+every operation, and therefore quadratic time for everything. So I don't want to do that. The efficient solution is to wait until the array gets
+one-quarter full before you have it. And that's very easy to implement. We can just test if the array
+is one quarter full, if it is, we resize it to half full. And so then at that point,
+it's half full, and it can either grow by adding stuff or
+shrink by subtracting stuff. But there won't be another
+resizing array operation until it either gets totally full or
+half again full. So the invariant of that is that
+the array is always between 25% and 100% full, number one. And number two, that every time you
+resize, you've already paid for it in an amortized sense by inserting,
+pushing or popping. So here's just what
+happens to the array for our small client example. And you can see at the beginning,
+it doubles from one to two to four, but once it gets to four, it stays, once it
+gets to eight, it stays at that size for awhile even though
+there's some operations. And it doesn't shrink back to four until
+after there's only two items in there, and then it shrinks, and so forth. So array resizing doesn't
+happen that often, but it's a very effective way of
+implementing the stack API with an array where the client does not have to
+provide the maximum capacity of the stack. But still, we're guaranteed that
+the amount of the memory that we are use is always only a constant multiple of
+the number of items actually on the stack. So, the analysis now says that
+the average running time per operation for
+whatever the sequence of operations is, the average running time is going to
+be proportional to a constant. Now, there is a worst case, that is,
+at the point when the stack doubles, it takes time proportional to N. So it's not quite as good
+performance as we might like. But the advantage that we
+get is very fast pushes and pops, just access array and increment it,
+and very efficient for most operations. And for many, many clients,
+that's an effective tradeoff to make. So what about memory usage? Well, this is the analysis
+of memory usage for stacks, and it's actually
+less memory than for strings. The amount used is between 8N and 32N, depending on how full the array is and just a quick analysis of the amount
+of space that arrays take in Java. So, again, this analysis is just for
+the stack itself, not for the strings, which the client owns. So, what are the tradeoffs between using
+a resizing array versus a linked list? Those are two different
+implementations of the same API, and the client can use
+them interchangeably. Which one is better? In many situations, we're going to
+have multiple implementations of APIs, and depending on properties
+of the client program, we're going to have to choose which
+one is the better one to use. So for linked lists, every operation
+takes constant time in the worst case, that's a guarantee. But we have to use a little extra time and
+space to deal with the links. So it's going to be slower. Resizing-array implementation. We have a good amortized time, so total
+averaged over the whole process is good. We have less wasted space and probably
+faster implementation of each operation. And so for some clients,
+maybe that makes a difference. Perhaps you wouldn't want to use
+a resizing-array implementation at the moment that your plane's coming in for
+a landing. You wouldn't want it to all of a sudden
+not implement some operation quickly. If you need that kind of order,
+maybe in an internet switch where packets are coming through at a great rate, you
+wouldn't want to be in a situation where you're missing some data because
+something got slow all of a sudden. So that's a tradeoff
+that the client can make. If I want that guarantee, if I want to be
+sure that every operation's going to be fast, I'll use a linked list. And if I don't need that guarantee, if I
+just care about the total amount of time, I'll probably use the resizing-array
+because the total will be much less, because individual operations are fast. So even with these simple data structures,
+we have really important tradeoffs that actually make a difference
+in lots of practical situations.

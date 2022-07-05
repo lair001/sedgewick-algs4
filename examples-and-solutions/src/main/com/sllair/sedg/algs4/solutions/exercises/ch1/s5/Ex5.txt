@@ -1,0 +1,23 @@
+Let M = num of input pairs = 10^6
+Let N = num of sites = 10^9
+
+The instructions outside of the for loop are only executed
+M = 10^6 times whereas the instructions inside the for loop are
+executed MN = 10^15 times. Therefore, the contribution of the
+instructions outside of the for loop to the runtime is
+negligible compared to that of the instructions outside of the
+for loop.  Hence, we will ignore the instructions outside of
+the for loop in our estimate.
+
+Let L = num of instructions inside the for loop
+We are instructed to use the approximation L ~= 10.
+
+Let C = num of instructions the CPU can execute per second.
+We are instructed to use the approximation C ~= 10^9 / s.
+
+Let T = time required to solve the dynamic
+connectivity problem.
+T = MNL/C = (10^6 * 10^9 * 10)/(10^9 / s) = 10^7 s
+
+Now convert to days using (1/(60 * 60 * 24)) days/s
+T = (10^7 / 86400) days ~=  115.741 days

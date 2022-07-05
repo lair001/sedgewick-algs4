@@ -1,0 +1,31 @@
+#!/bin/bash
+
+REPO_LIB=${ALGS4_REPO_ROOT}/lib
+
+# put the jars on the classpath
+CLASSPATH=.
+CLASSPATH=$CLASSPATH:${ALGS4_REPO_ROOT}/examples-and-solutions/src/main
+CLASSPATH=$CLASSPATH:${REPO_LIB}/algs4.jar
+CLASSPATH=$CLASSPATH:${REPO_LIB}/sedgewick-stdlib.jar
+CLASSPATH=$CLASSPATH:${REPO_LIB}/sedgewick-introcs.jar
+
+# If we need to put the junit dependencies on the classpath
+# for some reason. Currently running junit test from Intellij
+# rather than from the command line.
+# CLASSPATH=$CLASSPATH:${REPO_LIB}/apiguardian-api-1.1.2.jar
+# CLASSPATH=$CLASSPATH:${REPO_LIB}/junit-jupiter-5.8.2.jar
+# CLASSPATH=$CLASSPATH:${REPO_LIB}/junit-jupiter-api-5.8.2.jar
+# CLASSPATH=$CLASSPATH:${REPO_LIB}/junit-jupiter-engine-5.8.2.jar
+# CLASSPATH=$CLASSPATH:${REPO_LIB}/junit-jupiter-params-5.8.2.jar
+# CLASSPATH=$CLASSPATH:${REPO_LIB}/junit-platform-commons-1.8.2.jar
+# CLASSPATH=$CLASSPATH:${REPO_LIB}/opentest4j-1.2.0.jar
+
+
+# execute on Windows/Linux using "java" but on OS X using "java_home -exec java"
+JAVA="java"
+if [ -f /usr/libexec/java_home ]; then
+    JAVA="/usr/libexec/java_home -exec java"
+fi
+
+# executes with the textbook libraries in the classpath
+$JAVA -cp "${CLASSPATH}" "$@"

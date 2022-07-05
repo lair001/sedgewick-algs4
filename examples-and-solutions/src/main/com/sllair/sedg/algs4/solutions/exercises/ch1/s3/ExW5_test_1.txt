@@ -1,0 +1,19 @@
+push 5
+push 1
+max
+push 9
+push 8
+max
+push 2
+push 0
+push 3
+pop
+pop
+pop
+pop
+max
+pop
+max
+pop
+max
+pop

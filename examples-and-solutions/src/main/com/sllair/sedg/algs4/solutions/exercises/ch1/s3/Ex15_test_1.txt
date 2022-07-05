@@ -1,0 +1,8 @@
+5
+hello1
+hola2
+hallo3
+shalom4
+bonjour5
+konnichiwa6
+witam7

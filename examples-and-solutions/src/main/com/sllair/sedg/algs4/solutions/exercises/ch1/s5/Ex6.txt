@@ -1,0 +1,59 @@
+Let M = num of input pairs = 10^6
+Let N = num of sites = 10^9
+
+Let L = num of instructions inside the while loop of find()
+We aren't given directions on how to estimate this, but the
+statements in this while loop look fairly comparable to those
+of the for loop of Ex5 so we'll use the same
+approximation: L ~= 10.
+
+Let C = num of instructions the CPU can execute per second.
+We are instructed to use the approximation C ~= 10^9 / s.
+
+For every input pair, find() is invoked 4 times.  Twice for
+connected and twice() for union(). (In theory, we could cut this
+down to 2 if we stored roots found by connected() and used them
+when invoking union(), but the text doesn't propose such an
+optimization. It doesn't affect the order of the runtime
+complexity anyway.  Just the constant.)  For a Weighted Quick
+Union, the tree height is upper bounded by lg(N).
+
+Let Q = num of times iteration of the while loop
+Q ~= 4 * M * lg(N) = 4 * 10 ^ 6 * lg(10^9) = 3.6 * 10^7
+
+The rest of instructions are invoked approximately M times.
+This is negligible compared to Q so they will be ignored in
+our approximation. However, the balance is far less lopsided
+than for Ex5. It would be reasonable to include them if we were
+conducting a more precise analysis.
+
+Let T = time required to solve the dynamic
+connectivity problem.
+T ~= QL/C = (3.6 * 10^7 * 10)/(10^9 / s) = 3.6 * 10^-1 s
+
+But wait.  Aren't we forgetting something?  Wouldn't the
+runtime of initializing 10^9 sites dwarf that of the find()
+calls?
+
+Let K = num of instructions to initialize a site
+For each site, we must assign a value to both id[] and sz[].
+This is comparable to the number of array accesses in the while
+loop in find().  Therefore, if we estimate L ~= 10, it is also
+reasonable to estimate: K ~= 10.
+
+(Actually, Java will assign a value of 0 to each index of an
+int[] upon initialization. Therefore, there are actually
+4 array value assignments per site suggesting K ~= 20. However,
+this a language implementation detail that isn't intrinsic to
+the algorithm.)
+
+Then
+T ~= QL/C + NK/C = 0.36 s + (10^9 * 10)/(10^9 / s)
+                 = (0.36 + 10) s = 10.36 s
+
+In this case, it would have been reasonable to use the site
+initialization time as our estimate: 10 s.
+
+Finally, convert to days using (1/(60 * 60 * 24)) days/s
+T ~= (10.36 / 86400) days ~=  1.2 * 10^-4 days
+

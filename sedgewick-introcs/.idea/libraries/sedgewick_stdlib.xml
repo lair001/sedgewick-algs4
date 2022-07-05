@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sedgewick-stdlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../lib/sedgewick-stdlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

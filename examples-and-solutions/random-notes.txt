@@ -1,0 +1,29 @@
+Some random facts I don't want to forget. I'll find a proper home for this later.
+
+        /*
+         * The sum of distinct integers [1, N] is:
+         *
+         * N * ( N + 1 ) / 2
+         *
+         * https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF
+         *
+         * The number of distinct pairs of elements of a set of size N is
+         * a very similar formula:
+         *
+         * N * ( N - 1 ) / 2
+         *
+         * Don't get them confused.  This second formula is significant since
+         * it is the number of iteration of this nested for loop:
+         *
+         * for (int i = 0; i < N; i++) {
+         *   for (int j = i; j < N; j++) {
+         *   }
+         * }
+         *
+         * Remember this formula.
+         *
+         * For the curious, the first formula can be generalized to an arbitrary
+         * set of distinct and consecutive integers:
+         *
+         * https://www.cuemath.com/sum-of-integers-formula/
+         */

@@ -1,0 +1,2 @@
+See solution for Exercise 36 from Section 1.3 of the booksite.
+../1.3/ExW36.java

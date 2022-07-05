@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2bf5faf-7271-4706-b090-63fe738dfdbf" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <analyzeAfterCompile>true</analyzeAfterCompile>
+    <toolWindowToFront>false</toolWindowToFront>
+  </component>
+  <component name="ProjectId" id="2BmaK6Vck1JCdTM1kaAMqAzF2pg" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showModules" value="false" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/exercises/ch1/s3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projs/part-1/week-3/collinear" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\coursera\sedgewick-algs4\exercises-and-quizzes\src\main\com\sllair\sedg\algs4\exercises\ch1\s5" />
+      <recent name="C:\coursera\sedgewick-algs4\exercises-and-quizzes\src\main\com\sllair\sedg\algs4\examples\ch1\s5" />
+      <recent name="C:\coursera\sedgewick-algs4\exercises-and-quizzes\src\main\com\sllair\sedg\algs4\exercises\ch1\s4" />
+      <recent name="C:\coursera\sedgewick-algs4\exercises-and-quizzes\src\main\com\sllair\sedg\algs4\examples\ch1\s4" />
+      <recent name="C:\coursera\sedgewick-algs4\exercises-and-quizzes\src\main\com\sllair\sedg\algs4\exercises\ch1\s3" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sllair.sedg.algs4.solutions.exercises.ch2.s1" />
+      <recent name="com.sllair.sedg.algs4.solutions.quizzes" />
+      <recent name="com.sllair.sedg.algs4.solutions" />
+      <recent name="com.sllair.sedg.algs4.exercises.ch2.s1" />
+      <recent name="com.sllair.sedg.algs4.exercises.ch1.s4" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex18">
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.examples.ch2.s2.Merge" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.examples.ch2.s2.Merge" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="cards.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.exercises.ch2.s2.Ex10" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex10" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="tiny.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.quizzes.part1.week2.elementary_sorts.P3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.part1.week2.elementary_sorts.P3" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="P3_test_1.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex11" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex11" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="tiny.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex12" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex12" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="5 tiny.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex18" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex18" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="pt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex19" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex19" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="tiny.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex8" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex8" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="tiny.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedg.algs4.solutions.quizzes.part1.week3.mergesort.P1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.quizzes.part1.week3.mergesort.P1" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.DataPlotter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedgewick.algs4.ch1.s4.solutions.DataPlotter" />
+      <module name="exercises-and-quizzes" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex15" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex15" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="../examples/1Kints.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex16" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex16" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="../examples/1Kints.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex17" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex17" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="../examples/2Kints.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex18" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex18" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="../examples/2Kints.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex2" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="../examples/2Kints.txt s" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex20" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex20" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="Ex20_test_1.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex24" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex24" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="n 100 20" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex25" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex25" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="n 100 20" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex3" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="log" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.Ex8" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.Ex8" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="../examples/2Kints.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.ExW12" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.ExW12" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="ExW12_test_1.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.ExW16" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.ExW16" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="ExW16_test_1.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s4.solutions.ExW17" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch1.s4.ExW17" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="ExW17_test_3.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s5.solutions.Ex11" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.exercises.ch1.s5.solutions.Ex11" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="../examples/tinyUF.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch1.s5.solutions.Ex17" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.exercises.ch1.s5.solutions.Ex17" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="&lt; 10" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch2.s1.solutions.Ex12" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s1.Ex12" />
+      <module name="exercises-and-quizzes" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch2.s1.solutions.Ex17" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s1.Ex17" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="Selection 100" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch2.s1.solutions.Ex18" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s1.Ex18" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="Insertion 100" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch2.s1.solutions.Ex25" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s1.Ex25" />
+      <module name="exercises-and-quizzes" />
+      <method v="2" />
+    </configuration>
+    <configuration name="com.sllair.sedgewick.algs4.ch2.s1.solutions.Ex27" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s1.Ex27" />
+      <module name="exercises-and-quizzes" />
+      <option name="PROGRAM_PARAMETERS" value="200" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Ex11Test.testEnhancedMergeSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercises-and-quizzes" />
+      <option name="PACKAGE_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2" />
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex11Test" />
+      <option name="METHOD_NAME" value="testEnhancedMergeSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex11Test.testSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercises-and-quizzes" />
+      <option name="PACKAGE_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2" />
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s2.Ex11Test" />
+      <option name="METHOD_NAME" value="testSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex25Test.testFasterInsertionSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercises-and-quizzes" />
+      <option name="PACKAGE_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s1" />
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.exercises.ch2.s1.Ex25Test" />
+      <option name="METHOD_NAME" value="testFasterInsertionSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercises-and-quizzes" />
+      <option name="PACKAGE_NAME" value="com.sllair.sedg.algs4.solutions.part1.week2.elementary_sorts" />
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.part1.week2.elementary_sorts.P2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P2Test.testIsPermutationWithRandomTrials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exercises-and-quizzes" />
+      <option name="PACKAGE_NAME" value="com.sllair.sedg.algs4.solutions.part1.week2.elementary_sorts" />
+      <option name="MAIN_CLASS_NAME" value="com.sllair.sedg.algs4.solutions.part1.week2.elementary_sorts.P2Test" />
+      <option name="METHOD_NAME" value="testIsPermutationWithRandomTrials" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Ex25Test.testFasterInsertionSort" />
+        <item itemvalue="JUnit.Ex11Test.testEnhancedMergeSort" />
+        <item itemvalue="JUnit.Ex11Test.testSort" />
+        <item itemvalue="JUnit.P2Test.testIsPermutationWithRandomTrials" />
+        <item itemvalue="JUnit.P2Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/quizzes/part1/week2/elementary_sorts/P2.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/quizzes/part1/week2/elementary_sorts/P2.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/quizzes/part1/week2/elementary_sorts/P2.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/quizzes/part1/week2/elementary_sorts/P2.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/unit-test/com/sllair/sedg/algs4/solutions/quizzes/part1/week2/elementary_sorts/P2Test.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/unit-test/com/sllair/sedg/algs4/solutions/quizzes/part1/week2/elementary_sorts/P2Test.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/unit-test/com/sllair/sedg/algs4/solutions/quizzes/part1/week2/elementary_sorts/P2Test.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/exercises/ch2/s2/Ex10.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/exercises/ch2/s2/Ex10.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/exercises/ch2/s1/Ex25.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/sllair/sedg/algs4/solutions/exercises/ch2/s2/Ex11.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="loPrev.item" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

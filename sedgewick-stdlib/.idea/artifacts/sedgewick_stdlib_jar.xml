@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sedgewick-stdlib:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sedgewick_stdlib_jar</output-path>
+    <root id="archive" name="sedgewick-stdlib.jar">
+      <element id="module-output" name="sedgewick-stdlib" />
+    </root>
+  </artifact>
+</component>

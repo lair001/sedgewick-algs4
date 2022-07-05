@@ -1,0 +1,11 @@
+10
+blue
+white
+red
+white
+red
+blue
+blue
+white
+red
+red
